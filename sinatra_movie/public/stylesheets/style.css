@@ -1,0 +1,34 @@
+/*background image wont show*/
+/*style is not showing up on poster page*/
+/*change fonts*/
+/*find better color palette*/
+/*make cool design/structural addition*/
+
+body {
+	background-image: url("/images/majestic_theater.jpg");
+	background-size: cover;
+}
+
+.row {
+	margin: 60px auto;
+	text-align: center;
+}
+
+label {
+	color: white;
+	font-size: 15px;
+	margin-top: 15px;	
+}
+
+#the_box_office {
+	font-family: 'Mr Dafoe', cursive;
+	text-align: center;
+	color: white;
+	font-size: 104px;
+}
+
+#the_box_office:hover {
+  text-shadow: 0 0 5px white;
+  color: black;
+  -webkit-transition: .05s;
+}

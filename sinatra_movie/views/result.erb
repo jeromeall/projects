@@ -1,0 +1,16 @@
+	
+	<h1>Movie Results</h1>
+
+	<ul>
+  		<% @result["Search"].map do |search_hash| %>
+
+  		
+	    	<li>
+	    		<a href = '/poster/<%= search_hash["imdbID"] %>' > 
+	    			<span>Title: </span> <%= search_hash["Title"] %> <br><span>Year: </span><%= search_hash["Year"] %> 
+	    		</a>
+	    	</li>
+  		
+  		<% end %>
+
+	</ul>

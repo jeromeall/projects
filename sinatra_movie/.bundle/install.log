@@ -1,0 +1,19 @@
+# Logfile created on 2014-01-15 16:04:16 -0800 by logger.rb/44203
+I, [2014-01-15T16:04:16.990146 #10342]  INFO -- : 0:  backports (3.4.0) from /Users/jeromeallouche/.rvm/gems/ruby-2.1.0/specifications/backports-3.4.0.gemspec
+I, [2014-01-15T16:04:16.990444 #10342]  INFO -- : 0:  coderay (1.1.0) from /Users/jeromeallouche/.rvm/gems/ruby-2.1.0/specifications/coderay-1.1.0.gemspec
+I, [2014-01-15T16:04:16.990703 #10342]  INFO -- : 0:  ffi (1.9.3) from /Users/jeromeallouche/.rvm/gems/ruby-2.1.0/specifications/ffi-1.9.3.gemspec
+I, [2014-01-15T16:04:16.990977 #10342]  INFO -- : 0:  mime-types (1.25.1) from /Users/jeromeallouche/.rvm/gems/ruby-2.1.0/specifications/mime-types-1.25.1.gemspec
+I, [2014-01-15T16:04:16.991236 #10342]  INFO -- : 0:  ethon (0.6.2) from /Users/jeromeallouche/.rvm/gems/ruby-2.1.0/specifications/ethon-0.6.2.gemspec
+I, [2014-01-15T16:04:16.991484 #10342]  INFO -- : 0:  json (1.8.1) from /Users/jeromeallouche/.rvm/rubies/ruby-2.1.0/lib/ruby/gems/2.1.0/specifications/default/json-1.8.1.gemspec
+I, [2014-01-15T16:04:16.991731 #10342]  INFO -- : 0:  method_source (0.8.2) from /Users/jeromeallouche/.rvm/gems/ruby-2.1.0/specifications/method_source-0.8.2.gemspec
+I, [2014-01-15T16:04:16.991968 #10342]  INFO -- : 0:  multi_json (1.8.2) from /Users/jeromeallouche/.rvm/gems/ruby-2.1.0/specifications/multi_json-1.8.2.gemspec
+I, [2014-01-15T16:04:16.992211 #10342]  INFO -- : 0:  slop (3.4.7) from /Users/jeromeallouche/.rvm/gems/ruby-2.1.0/specifications/slop-3.4.7.gemspec
+I, [2014-01-15T16:04:16.992470 #10342]  INFO -- : 0:  pry (0.9.12.4) from /Users/jeromeallouche/.rvm/gems/ruby-2.1.0/specifications/pry-0.9.12.4.gemspec
+I, [2014-01-15T16:04:16.992717 #10342]  INFO -- : 0:  rack (1.5.2) from /Users/jeromeallouche/.rvm/gems/ruby-2.1.0/specifications/rack-1.5.2.gemspec
+I, [2014-01-15T16:04:16.992953 #10342]  INFO -- : 0:  rack-protection (1.5.2) from /Users/jeromeallouche/.rvm/gems/ruby-2.1.0/specifications/rack-protection-1.5.2.gemspec
+I, [2014-01-15T16:04:16.993210 #10342]  INFO -- : 0:  rack-test (0.6.2) from /Users/jeromeallouche/.rvm/gems/ruby-2.1.0/specifications/rack-test-0.6.2.gemspec
+I, [2014-01-15T16:04:16.993446 #10342]  INFO -- : 0:  tilt (1.4.1) from /Users/jeromeallouche/.rvm/gems/ruby-2.1.0/specifications/tilt-1.4.1.gemspec
+I, [2014-01-15T16:04:16.993673 #10342]  INFO -- : 0:  sinatra (1.4.4) from /Users/jeromeallouche/.rvm/gems/ruby-2.1.0/specifications/sinatra-1.4.4.gemspec
+I, [2014-01-15T16:04:16.993929 #10342]  INFO -- : 0:  sinatra-contrib (1.4.2) from /Users/jeromeallouche/.rvm/gems/ruby-2.1.0/specifications/sinatra-contrib-1.4.2.gemspec
+I, [2014-01-15T16:04:16.994157 #10342]  INFO -- : 0:  typhoeus (0.6.7) from /Users/jeromeallouche/.rvm/gems/ruby-2.1.0/specifications/typhoeus-0.6.7.gemspec
+I, [2014-01-15T16:04:16.994391 #10342]  INFO -- : 0:  bundler (1.5.1) from /Users/jeromeallouche/.rvm/gems/ruby-2.1.0@global/specifications/bundler-1.5.1.gemspec
