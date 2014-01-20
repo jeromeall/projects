@@ -1,4 +1,6 @@
-
+h5 {
+	color: white;
+}
 
 .navbar-brand.reelsearch {
 	font-size: 1.75em;
@@ -8,6 +10,11 @@
 
 .text-center.welcome {
 	margin-top: 15%;
+}
+
+.text-center.welcome h1, h5{
+	
+
 }
 
 .h1.brand {
