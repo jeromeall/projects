@@ -1,25 +1,40 @@
-/*background image wont show*/
-/*style is not showing up on poster page*/
-/*change fonts*/
-/*find better color palette*/
-/*make cool design/structural addition*/
 
 
-  /* Carousel base class */
-
-
-  /* Negative margin to pull up carousel. */
-  margin-top: -50px;
+.navbar-brand.reelsearch {
+	font-size: 1.75em;
 }
 
-/* Since positioning the image, we need to help out the caption */
-.carousel-caption {
-  z-index: 10;
+
+
+.text-center.welcome {
+	margin-top: 15%;
 }
 
-/* Declare heights because of positioning of img element */
-.carousel .item {
-  height: 500px;
-  background-color: #777;
+.h1.brand {
+	font-size: 4.5em;
+	color: white;
 }
+
+.row .container.movie_title {
+	margin-top: 25px;
+	background-image: url("/images/film_reel_75.png");
+	padding: 10px;
+	border-radius: 15px;
+}
+.row p {
+	color: black;
+}
+
+.row p span {
+	font-weight: bold;
+	font-size: 1.1em;
+}
+
+.container.movie_title img {
+	float: left;
+	width: 300px;
+	margin-right: 5px;
+}
+
+
 
