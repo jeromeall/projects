@@ -9,12 +9,24 @@ get '/' do
   erb :index
 end
 
+
 post '/result' do
   search_str = params[:movie]
   @title = "Movie Results"
   # Make a request to the omdb api here!
-  response = Typhoeus.get("www.omdbapi.com", :params => {:s => search_str})
-  @result = JSON.parse(response.body)
+  
+  s_response = Typhoeus.get("www.omdbapi.com", :params => {:s => search_str})
+  @s_result = JSON.parse(s_response.body)
+
+  imdb_id_arr = @s_result["Search"].map{|movie_title| movie_title["imdbID"]}
+
+  @info_arr = []
+  imdb_id_arr.each do |imdb_id|    
+    i_response = Typhoeus.get("www.omdbapi.com", :params => {:i => imdb_id})
+    i_result = JSON.parse(i_response.body)
+    @info_arr << i_result
+  end
+  # binding.pry
 
   erb :result
 
@@ -25,12 +37,11 @@ end
 
 
 
-get '/poster/:imdb' do |imdb_id|
-  @title = "Movie Poster"
-  # Make another api call here to get the url of the poster.
-  response = Typhoeus.get("www.omdbapi.com", :params => {:i => imdb_id })
-  @result = JSON.parse(response.body)
-
-  erb :poster
-end
+# get '/result' do 
+#   # @title = "Movie Poster"
+#   # Make another api call here to get the url of the poster.
+#   i_response = Typhoeus.get("www.omdbapi.com", :params => {:i => @imdb_id })
+#   @i_result = JSON.parse(i_response.body)
+#   erb :result
+# end
 

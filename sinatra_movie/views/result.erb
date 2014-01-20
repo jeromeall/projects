@@ -1,16 +1,21 @@
+
+<div id = "result_container" class ="container">
 	
-	<h1>Movie Results</h1>
-
-	<ul>
-  		<% @result["Search"].map do |search_hash| %>
-
-  		
-	    	<li>
-	    		<a href = '/poster/<%= search_hash["imdbID"] %>' > 
-	    			<span>Title: </span> <%= search_hash["Title"] %> <br><span>Year: </span><%= search_hash["Year"] %> 
-	    		</a>
-	    	</li>
-  		
-  		<% end %>
-
-	</ul>
+	<a href = '../'> <h1>ReelSearch</h1></a>
+	
+		
+	  		<% @info_arr.map do |info_hash| %>
+	  			<div id= "title" class = "row">
+		    			<img id= "poster" src = '<%= info_hash["Poster"] %>' > 
+		    			<p id="info">
+		    			<span>Title: </span> <%= info_hash["Title"] %> <span>Year: </span><%= info_hash["Year"] %> <br>
+		    			<span>Rated: </span> <%= info_hash["Rated"] %> <span>Released: </span><%= info_hash["Released"] %> <br>
+		    			<span>Runtime: </span> <%= info_hash["Runtime"] %><span>Genre: </span><%= info_hash["Genre"] %> <br>
+		    			<span>Director: </span><%= info_hash["Director"] %> <span>Actors: </span><%= info_hash["Actors"] %> <br>
+		    			<span>Plot: </span><%= info_hash["Plot"] %> 
+		    			 </p>
+				</div>  		
+	  		<% end %>
+	
+</div>
+	
