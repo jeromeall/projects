@@ -3,10 +3,23 @@
 /*change fonts*/
 /*find better color palette*/
 /*make cool design/structural addition*/
-#poster {
-	float: left;
+
+
+  /* Carousel base class */
+
+
+  /* Negative margin to pull up carousel. */
+  margin-top: -50px;
 }
 
-#info {
-	float:right;
+/* Since positioning the image, we need to help out the caption */
+.carousel-caption {
+  z-index: 10;
 }
+
+/* Declare heights because of positioning of img element */
+.carousel .item {
+  height: 500px;
+  background-color: #777;
+}
+
