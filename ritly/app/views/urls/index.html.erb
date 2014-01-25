@@ -1,7 +1,8 @@
 <h1>Ritly</h1>
 <%= form_for @url do |f|%>
-<%= f.text_field :link %>
+<%= f.text_field :link, placeholder: 'Enter your link' %>
+<%= f.text_field :random_string, placeholder: 'Custom Link' %>
 
-<%= f.submit %>
+<%= f.submit 'Shorten' %>
 
 <%end%>

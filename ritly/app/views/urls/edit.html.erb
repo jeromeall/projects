@@ -1,0 +1,9 @@
+
+<h1> Edit Custom Code </h1>
+<%= form_for :url, url: url_path(@url), method: :patch do |f|%>
+<%= f.label "Enter new custom code" %>
+<%= f.text_field :random_string%>
+
+<%= f.submit 'Update' %>
+
+<%end%>

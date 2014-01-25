@@ -1,1 +1,16 @@
-<a href='http://<%= @url.link %>'>localhost:3000/<%= @url.random_string %> </a>
+
+<h1> Here is your link!</h1>
+<h5> Enter the following URL in your browser to be redirected: </h5>
+
+<div>
+<a href='http://<%= @url.link %>'>localhost:3000/go/<%= @url.random_string %> </a>
+</div>
+<br>
+<div>
+
+<%= link_to 'Back', urls_path %>
+| <%= link_to 'Edit', edit_url_path(@url) %>
+
+
+
+</div>
