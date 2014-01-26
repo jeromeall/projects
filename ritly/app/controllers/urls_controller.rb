@@ -31,6 +31,10 @@ class UrlsController < ApplicationController
 
   end
 
+  def show_all
+    @urls = Url.all
+  end
+
 
   # Show page
   def show
@@ -43,13 +47,16 @@ class UrlsController < ApplicationController
 
   def update
      @url = Url.find(params[:id])
- 
-  if @url.update(url_params)
-    redirect_to @url
-  else
-    render 'edit'
+    if @url.update(url_params)
+      redirect_to @url
+    else
+      render 'edit'
+    end
   end
 
+  def destroy
+    @url = Url.find(params[:id])
+    @url.destroy
   end
 
 

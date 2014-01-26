@@ -3,8 +3,8 @@
 <h5> To be redirected to your website, click the following URL or enter it in your browser </h5>
 
 <div>
-<a href='http://<%= @url.link %>'>localhost:3000/go/<%= @url.random_string %> </a><br> <%= link_to 'Back', urls_path %>
-| <%= link_to 'Edit', edit_url_path(@url) %>
+<a href='http://<%= @url.link %>'>localhost:3000/go/<%= @url.random_string %> </a><br> <%= button_to 'Delete', urls_path, method: :destroy %>
+<%= button_to 'Edit', edit_url_path(@url) %>
 </div>
 <br>
 

@@ -1,0 +1,9 @@
+<% @urls.each do |url| %>
+	<div>
+	<%= url.link %>
+	<a href='http://<%= url.link %>'>localhost:3000/go/<%= url.random_string %> </a> <%= link_to 'Back', urls_path %>
+		| <%= link_to 'Edit', edit_url_path(url) %>
+</div>
+
+
+<%end%>
