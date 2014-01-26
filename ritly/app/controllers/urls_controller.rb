@@ -25,10 +25,16 @@ class UrlsController < ApplicationController
     redirect_to "http://#{url.link}"
   end
 
+  def preview
+    random_string = params[:random_string]
+    @url = Url.find_by_random_string(random_string)
+
+  end
+
 
   # Show page
   def show
-  	@url = Url.find(params[:id])
+  	@url = Url.find_by(params[:id])
   end
 
   def edit
