@@ -1,0 +1,91 @@
+
+
+body {
+		background-color: #C9E3E6;
+}
+
+.row {
+	margin-bottom: 5px;
+}
+.container {
+	max-width: 800px;
+}
+.container > p {
+	text-align: center;
+}
+
+h1, h4, h5 {
+	color: #414141;
+}
+
+h1.ritly {
+	color: #FF8402;
+	font-family: 'Leckerli One', cursive;
+	font-size: 4em;
+}
+
+a {
+	font-family: 'Leckerli One', cursive;
+	color: #FF8402;
+	font-size: 1.25em;
+}
+
+.show_link {
+	background-color: white;
+
+}
+
+
+
+.navbar-default {
+	margin-top: 15px;	
+	border: 2px solid white;
+	border-radius: 6px;
+	background-color: transparent;
+}
+
+.navbar-right {
+	padding-right: 15px;
+}
+.navbar-brand.ritly {
+	color: #FF8402;
+	font-family: 'Leckerli One', cursive;
+	font-size: 2em;
+}
+
+
+
+table {
+  border-collapse: separate;
+  border-spacing: 0 5px;
+}
+
+
+tbody  {
+  background-color: transparent;
+}
+
+tr, td {
+	color: #414141;
+}
+
+td.table_link {
+	text-align: center;
+}
+
+
+tr td:first-child,
+tr th:first-child {
+	border-color: white;
+  border-top-left-radius: 6px;
+  border-bottom-left-radius: 6px;
+}
+
+tr td:last-child,
+tr th:last-child {
+	border-color: white;
+  border-top-right-radius: 6px;
+  border-bottom-right-radius: 6px;
+}
+
+

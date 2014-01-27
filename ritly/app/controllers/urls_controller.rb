@@ -33,6 +33,7 @@ class UrlsController < ApplicationController
 
   def show_all
     @urls = Url.all
+    
   end
 
 
@@ -55,8 +56,10 @@ class UrlsController < ApplicationController
   end
 
   def destroy
-    @url = Url.find(params[:id])
-    @url.destroy
+    id = params[:id]
+    Url.find(id).delete
+
+    redirect_to "/urls"
   end
 
 

@@ -1,15 +1,29 @@
 
-<h1> Here is your link!</h1>
-<h5> To be redirected to your website, click the following URL or enter it in your browser </h5>
 
-<div>
-<a href='http://<%= @url.link %>'>localhost:3000/go/<%= @url.random_string %> </a><br> <%= button_to 'Delete', urls_path, method: :destroy %>
-<%= button_to 'Edit', edit_url_path(@url) %>
+<div class ="container show_all">
+
+		<nav class="navbar navbar-default">
+		<div class="navbar-header">
+			<a class="navbar-brand ritly" href="/">Ritly</a>
+		</div>
+		<p class="navbar-text navbar-right"><%= link_to("Library", urls_path) %></p>
+	</nav>
+
+	<h1> Done!</h1>
+	<h5> Copy the following URL in your browser </h5>
+
+	
+		<table class="table table-hover" >
+			<tr>
+				<td><strong>localhost:3000/go/<%= @url.random_string %> </strong></td>
+				<td><%= link_to("Preview", preview_path(@url.random_string))%></td>
+				
+				<td><%=  link_to 'Edit', edit_url_path(@url[:id]) %></td>
+				<td><%= link_to "Delete", @url, :method => :delete %></td>
+			</tr>
+		</table>
+		
 </div>
-<br>
 
-<div>
-<h5>To access a preview for your new URL, enter the following into your browser </h5>
-<p>localhost:3000/go/<%= @url.random_string %>/preview</p>
 
-</div>
+

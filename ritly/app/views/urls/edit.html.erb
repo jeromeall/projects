@@ -1,9 +1,18 @@
 
-<h1> Edit Custom Code </h1>
+<div class ="container">
+<nav class="navbar navbar-default">
+<div class="navbar-header">
+<a class="navbar-brand ritly" href="/">Ritly</a>
+</div>
+<p class="navbar-text navbar-right"><%= link_to("Library", urls_path) %></p>
+</nav>
+<h4> Edit Custom Code </h4>
 <%= form_for :url, url: url_path(@url), method: :patch do |f|%>
-<%= f.label "Enter new custom code" %>
-<%= f.text_field :random_string%>
 
-<%= f.submit 'Update' %>
+<%= f.text_field :random_string, class: "form-control"%>
+
+<%= f.submit 'Update', class: "btn btn-sm btn-primary" %>
 
 <%end%>
+
+</div>

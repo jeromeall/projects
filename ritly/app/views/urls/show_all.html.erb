@@ -1,9 +1,25 @@
-<% @urls.each do |url| %>
-	<div>
-	<%= url.link %>
-	<a href='http://<%= url.link %>'>localhost:3000/go/<%= url.random_string %> </a> <%= link_to 'Back', urls_path %>
-		| <%= link_to 'Edit', edit_url_path(url) %>
+
+<div class="container">
+
+	<nav class="navbar navbar-default">
+		<div class="navbar-header">
+			<a class="navbar-brand ritly" href="/">Ritly</a>
+		</div>
+		<p class="navbar-text navbar-right"><%= link_to("Library", urls_path) %></p>
+	</nav>
+
+	<table class= "table table-hover custom ">
+
+
+		<% @urls.each do |url| %>
+			<tr>
+				<td><strong><%= url.link %></strong></td>
+				<td><%= url.random_string %> </td>
+				<td class= "table_link"><a><%= link_to("Show", url_path(url.id)) %></a></td>
+				<td class= "table_link"><%= link_to("Edit", edit_url_path(url.id)) %></td>
+				<td class= "table_link"><%= link_to "Delete", url_path(url.id), :method => :delete  %></td>
+			</tr>
+		<%end%>
+	</table>
+
 </div>
-
-
-<%end%>

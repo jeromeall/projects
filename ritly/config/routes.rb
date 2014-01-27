@@ -1,17 +1,24 @@
 Ritly::Application.routes.draw do
 
-get '/urls/all', to: "urls#show_all"
+  
+get '/urls', to: "urls#show_all"
+
+
+
+root to: "urls#index"
+
+delete '/urls', to: "urls#destroy"
 
   resources :urls
+
 	
 	get 'go/:random_string', to: "urls#transfer", as: 'go'
 	
-	get 'go/:random_string/preview', to: "urls#preview"
+	get 'go/:random_string/preview', to: "urls#preview", as: 'preview'
 
-  root to: "urls#index"
+  	
 
-  
-
+	
   
 
 
