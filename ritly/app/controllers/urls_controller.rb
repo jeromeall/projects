@@ -6,6 +6,8 @@ class UrlsController < ApplicationController
 
   # Create new row in db
   def create
+
+
   	@url = Url.create(url_params)
     if @url.random_string != ''
           @url['random_string'] = @url.random_string
@@ -13,7 +15,7 @@ class UrlsController < ApplicationController
           @url['random_string'] = SecureRandom.urlsafe_base64(10)
     end
   	@url.save
-  	redirect_to url_path(@url.id)
+  	redirect_to url_path(@url.random_string)
   end
 
 
@@ -39,7 +41,9 @@ class UrlsController < ApplicationController
 
   # Show page
   def show
-  	@url = Url.find_by(params[:id])
+    new_url = params[:id]
+
+  	@url = Url.find_by(random_string: new_url)
   end
 
   def edit
