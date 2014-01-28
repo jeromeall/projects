@@ -4,29 +4,35 @@
 <div class ="container home_page">
 
 	<%= form_for @url   do |f|%>
-		<div class="row">
-			<div class="col-md-6 col-md-offset-3">
-				<h1 class="ritly">Ritly</h1>
-				<%= f.text_field :link, class: "form-control", placeholder: 'Paste a link to shorten it' %> 
-			</div>
+	<div class="row">
+		<div class="col-md-6 col-md-offset-3">
+			<h1 class="ritly">Rit.ly</h1>
+			<%= f.text_field :link, class: "form-control", placeholder: 'Paste a link to shorten it' %> 
 		</div>
+	</div>
 
-		<div class="row">
-			<div class = "col-md-4 col-md-offset-3">
+	<div class="row">
+		<div class = "col-md-4 col-md-offset-3">
 			<%= f.text_field :random_string, class: "form-control", placeholder: 'Custom Ritly - leave blank for random code' %>
-			</div>
-			
-			<div class = "col-md-2 ">
-				<%= f.submit 'Shorten' ,class: "btn btn-sm btn-primary " %>
-			</div>
-
 		</div>
 
-		<div class="row">
-			<div class = "col-md-4 col-md-offset-3">
-				<%= link_to("Library", urls_path) %>
-			</div>
+		<div class = "col-md-2 ">
+			<%= f.submit 'Shorten' ,class: "btn btn-sm btn-info " %>
 		</div>
+
+	</div>
+
+	<div class="row">
+		<div class = "col-md-4 col-md-offset-3">
+			<% unless @url.errors.count == 0  %>
+			<ul>
+				<% @url.errors.full_messages.each do |msg| %>
+				<li><%= msg %></li>
+				<% end %>
+			</ul>
+			<% end %>
+		</div>
+	</div>
 	<%end%>
 
 </div>

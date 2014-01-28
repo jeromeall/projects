@@ -1,26 +1,28 @@
-<div class = "container">
+<div class = "container home_page">
 
+    <div class="row">
+        <div class="col-md-12 col-md-offset-5">
+            <h1>Sign in</h1>
+            <%= form_for(:session, url: sessions_path) do |f| %>
+                <div class="row">
+                    <div class="span6 offset3">
+                    	<%= f.text_field :email, placeholder: "Email" %>
+                    </div>
+                </div>
 
-    <h1>Sign in</h1>
-    <%= form_for(:session, url: sessions_path) do |f| %>
-        <div class="row">
-            <div class="span6 offset3">
-            	<%= f.text_field :email, placeholder: "Email" %>
-            </div>
+                <div class="row">
+                    <div class="span6 offset3">
+                    	<%= f.password_field :password, placeholder: "Password" %>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="span6 offset3">
+                    	<%= f.submit "Create", class: "btn btn-info" %>
+                    </div>
+                </div>
+
+            <%end%>
         </div>
-
-        <div class="row">
-            <div class="span6 offset3">
-            	<%= f.password_field :password, placeholder: "Password" %>
-            </div>
-        </div>
-
-        <div class="row">
-            <div class="span6 offset3">
-            	<%= f.submit "Create", class: "btn btn-primary" %>
-            </div>
-        </div>
-
-    <%end%>
-    
+        
 </div>

@@ -10,38 +10,24 @@ before_filter :signed_in_user, only: [:create, :new, :edit, :update]
   # Create new row in db
   def create
   	@url = Url.new(url_params)
+
     if @url.random_string != ''
           @url['random_string'] = @url.random_string
         else
           @url['random_string'] = SecureRandom.urlsafe_base64(10)
     end
-  	@url.save
-  	redirect_to url_path(@url.random_string)
+    if @url.save
+        flash[:success] = "Ritly Done!"
+        redirect_to @url
+    else
+        render'index'
+    end
   end
 
   # Show page
   def show
     url_info = params[:id]
-    @url = Url.find_by(random_string: url_info)
-  end
-
-
-  # Redirect to URL
-  def transfer
-    url_info = params[:id]
-    url = Url.find_by(random_string: url_info)
-    
-    redirect_to "http://#{url.link}"
-  end
-
-  def preview
-    url_info   = params[:id]
-    @url = Url.find_by(random_string: url_info)
-
-  end
-
-  def show_all
-    @urls = Url.all
+    @url = Url.find(url_info)
   end
 
   def edit
@@ -63,6 +49,26 @@ before_filter :signed_in_user, only: [:create, :new, :edit, :update]
 
     redirect_to "/urls"
   end
+
+  # Redirect to URL
+  def transfer
+    url_info = params[:random_string]
+    @url = Url.find_by(random_string: url_info)
+    
+    redirect_to "http://#{@url.link}"
+  end
+
+  def preview
+    url_info   = params[:random_string]
+    @url = Url.find_by(random_string: url_info)
+
+  end
+
+  def show_all
+    @urls = Url.all
+  end
+
+
 
 
   private

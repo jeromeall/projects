@@ -1,7 +1,6 @@
 
-
 body {
-		background-color: #C9E3E6;
+		background-color: #D6F0F5;
 }
 
 .row {
@@ -30,18 +29,18 @@ a {
 	font-size: 1.25em;
 }
 
+
 .show_link {
 	background-color: white;
 
 }
 
 
-
 .navbar-default {
 	margin-top: 15px;	
 	border: 2px solid white;
 	border-radius: 6px;
-	background-color: transparent;
+	background-color: rgba(255,255,255,.3);
 }
 
 .navbar-right {
@@ -50,7 +49,7 @@ a {
 .navbar-brand.ritly {
 	color: #FF8402;
 	font-family: 'Leckerli One', cursive;
-	font-size: 2em;
+	font-size: 1.75em;
 }
 
 
@@ -62,7 +61,7 @@ table {
 
 
 tbody  {
-  background-color: transparent;
+  background-color: rgba(255,255,255,.3);
 }
 
 tr, td {
