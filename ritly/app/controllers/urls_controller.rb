@@ -1,14 +1,15 @@
 class UrlsController < ApplicationController
+before_filter :signed_in_user, only: [:create, :new, :edit, :update]
+  
+
   def index
+    # Create an instance to work with in the view
   	@url = Url.new
   end
 
-
   # Create new row in db
   def create
-
-
-  	@url = Url.create(url_params)
+  	@url = Url.new(url_params)
     if @url.random_string != ''
           @url['random_string'] = @url.random_string
         else
@@ -18,32 +19,29 @@ class UrlsController < ApplicationController
   	redirect_to url_path(@url.random_string)
   end
 
+  # Show page
+  def show
+    url_info = params[:id]
+    @url = Url.find_by(random_string: url_info)
+  end
+
 
   # Redirect to URL
   def transfer
-    random_string = params[:random_string]
-    url = Url.find_by_random_string(random_string)
+    url_info = params[:id]
+    url = Url.find_by(random_string: url_info)
     
     redirect_to "http://#{url.link}"
   end
 
   def preview
-    random_string = params[:random_string]
-    @url = Url.find_by_random_string(random_string)
+    url_info   = params[:id]
+    @url = Url.find_by(random_string: url_info)
 
   end
 
   def show_all
     @urls = Url.all
-    
-  end
-
-
-  # Show page
-  def show
-    new_url = params[:id]
-
-  	@url = Url.find_by(random_string: new_url)
   end
 
   def edit

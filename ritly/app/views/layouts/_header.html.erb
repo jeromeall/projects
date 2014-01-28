@@ -1,0 +1,14 @@
+<nav class="navbar navbar-default">
+	<div class="navbar-header">
+		<a class="navbar-brand ritly" href="/">Ritly</a>
+	</div>
+	<ul class="nav pull-right">
+        <% if signed_in? %>
+            <li><%= link_to "My profile", current_user %></li>
+            <li><%= link_to "Sign out", signout_path, method: "delete" %></li>
+        <% else %>
+            <li><%= link_to "Sign up", signup_path %></li>
+            <li><%= link_to "Sign in", signin_path %></li>
+     	<%end%>
+	</ul>
+</nav>
